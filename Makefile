@@ -1,14 +1,17 @@
-install:
-	npm install
+develop:
+	npx webpack serve
 
-publish:
-	npm publish --dry-run
+install:
+	npm ci
+
+build:
+	rm -rf dist
+	NODE_ENV=production npx webpack --watch
+
+test:
+	npm test
 
 lint:
 	npx eslint .
 
-test:
-	npx npx -n '--experimental-vm-modules' jest --watch
-
-test-coverage:
-	npm test -- --coverage --coverageProvider=v8
+.PHONY: test
