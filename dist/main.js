@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelector("h1").innerHTML="RSS test!",document.querySelector(".lead").innerHTML="Check import"}();

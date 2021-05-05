@@ -1,5 +1,5 @@
 develop:
-	npx webpack serve
+	npx webpack serve --mode development --liveReload --open
 
 install:
 	npm ci
@@ -9,7 +9,7 @@ build:
 	NODE_ENV=production npx webpack
 
 test:
-	npm test
+	npx jest
 
 lint:
 	npx eslint .
