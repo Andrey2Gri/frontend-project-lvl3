@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title><![CDATA[Lorem ipsum feed for an interval of 1 minutes with 10 item(s)]]></title>
+    <description><![CDATA[This is a constantly updating lorem ipsum feed]]></description>
+    <link>http://example.com/</link>
+    <generator>RSS for Node</generator>
+    <lastBuildDate>Sat, 15 May 2021 14:34:15 GMT</lastBuildDate>
+    <pubDate>Sat, 15 May 2021 14:34:00 GMT</pubDate>
+    <copyright><![CDATA[Michael Bertolacci, licensed under a Creative Commons Attribution 3.0 Unported License.]]></copyright>
+    <ttl>1</ttl>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:34:00Z]]></title>
+      <description><![CDATA[Officia non pariatur culpa amet esse esse sit minim nostrud ut esse.]]></description>
+      <link>http://example.com/test/1621089240</link>
+      <guid isPermaLink="true">http://example.com/test/1621089240</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:34:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:33:00Z]]></title>
+      <description><![CDATA[Nostrud ullamco ad irure proident velit tempor reprehenderit proident.]]></description>
+      <link>http://example.com/test/1621089180</link>
+      <guid isPermaLink="true">http://example.com/test/1621089180</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:33:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:32:00Z]]></title>
+      <description><![CDATA[Officia veniam in duis cillum officia quis non.]]></description>
+      <link>http://example.com/test/1621089120</link>
+      <guid isPermaLink="true">http://example.com/test/1621089120</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:32:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:31:00Z]]></title>
+      <description><![CDATA[Ipsum non ex sit sit elit dolor duis mollit.]]></description>
+      <link>http://example.com/test/1621089060</link>
+      <guid isPermaLink="true">http://example.com/test/1621089060</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:31:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:30:00Z]]></title>
+      <description><![CDATA[Irure non sunt duis eiusmod pariatur et non nostrud voluptate labore esse ut sunt.]]></description>
+      <link>http://example.com/test/1621089000</link>
+      <guid isPermaLink="true">http://example.com/test/1621089000</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:29:00Z]]></title>
+      <description><![CDATA[Ea id aliquip incididunt dolor ad aliqua aute cillum velit exercitation velit.]]></description>
+      <link>http://example.com/test/1621088940</link>
+      <guid isPermaLink="true">http://example.com/test/1621088940</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:29:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:28:00Z]]></title>
+      <description><![CDATA[Cupidatat esse consectetur eiusmod id esse pariatur.]]></description>
+      <link>http://example.com/test/1621088880</link>
+      <guid isPermaLink="true">http://example.com/test/1621088880</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:28:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:27:00Z]]></title>
+      <description><![CDATA[Esse magna culpa nisi commodo duis et aute sint proident officia ipsum.]]></description>
+      <link>http://example.com/test/1621088820</link>
+      <guid isPermaLink="true">http://example.com/test/1621088820</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:27:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:26:00Z]]></title>
+      <description><![CDATA[Do dolor ut sint magna duis exercitation cupidatat.]]></description>
+      <link>http://example.com/test/1621088760</link>
+      <guid isPermaLink="true">http://example.com/test/1621088760</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:26:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Lorem ipsum 2021-05-15T14:25:00Z]]></title>
+      <description><![CDATA[Irure proident nulla commodo irure sint et eiusmod nulla consequat pariatur enim commodo.]]></description>
+      <link>http://example.com/test/1621088700</link>
+      <guid isPermaLink="true">http://example.com/test/1621088700</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sat, 15 May 2021 14:25:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

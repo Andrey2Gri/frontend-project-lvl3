@@ -1,58 +1,64 @@
 {
-  "name": "@hexlet/code",
-  "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Andrey2Gri/frontend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/Andrey2Gri/frontend-project-lvl3/actions)",
-  "main": "src/index.js",
-  "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production npx webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Andrey2Gri/frontend-project-lvl3.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Andrey2Gri/frontend-project-lvl3/issues"
-  },
-  "homepage": "https://github.com/Andrey2Gri/frontend-project-lvl3#readme",
-  "jest": {
-    "verbose": true,
-    "testURL": "http://localhost/"
-  },
-  "browserslist": "> 0.25%, not dead",
-  "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/preset-env": "^7.14.0",
-    "@testing-library/dom": "^7.30.4",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/user-event": "^13.1.8",
-    "autoprefixer": "^10.2.5",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.4",
-    "eslint": "^7.24.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.3.6",
-    "html-webpack-plugin": "^5.3.1",
-    "jest": "^26.6.3",
-    "mini-css-extract-plugin": "^1.5.0",
-    "nock": "^13.0.11",
-    "postcss": "^8.2.12",
-    "postcss-loader": "^5.2.0",
-    "sass": "^1.32.11",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.35.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "bootstrap": "4.6",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
-  }
+    "name": "@hexlet/code",
+    "version": "1.0.0",
+    "description": "[![Actions Status](https://github.com/Andrey2Gri/frontend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/Andrey2Gri/frontend-project-lvl3/actions)",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "rm -rf dist && NODE_ENV=production npx webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Andrey2Gri/frontend-project-lvl3.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Andrey2Gri/frontend-project-lvl3/issues"
+    },
+    "homepage": "https://github.com/Andrey2Gri/frontend-project-lvl3#readme",
+    "jest": {
+        "verbose": true,
+        "testURL": "http://localhost/"
+    },
+    "browserslist": "> 0.25%, not dead",
+    "devDependencies": {
+        "@babel/core": "^7.14.0",
+        "@babel/plugin-transform-runtime": "^7.14.2",
+        "@babel/preset-env": "^7.14.0",
+        "@testing-library/dom": "^7.30.4",
+        "@testing-library/jest-dom": "^5.12.0",
+        "@testing-library/user-event": "^13.1.8",
+        "autoprefixer": "^10.2.5",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^26.6.3",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.2.4",
+        "eslint": "^7.24.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-jest": "^24.3.6",
+        "html-webpack-plugin": "^5.3.1",
+        "jest": "^26.5.0",
+        "mini-css-extract-plugin": "^1.5.0",
+        "nock": "^13.0.11",
+        "postcss": "^8.2.12",
+        "postcss-loader": "^5.2.0",
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.35.0",
+        "webpack-cli": "^4.6.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.14.0",
+        "axios": "^0.21.1",
+        "bootstrap": "4.6",
+        "jquery": "^3.6.0",
+        "lodash": "^4.17.21",
+        "on-change": "^3.0.1",
+        "popper.js": "^1.16.1",
+        "yup": "^0.32.9"
+    }
 }
