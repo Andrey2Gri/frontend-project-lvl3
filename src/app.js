@@ -1,28 +1,10 @@
-import axios from 'axios';
-import * as yup from 'yup';
+import { setLocale } from 'yup';
+import i18n from 'i18next';
+import 'bootstrap/js/dist/modal';
 
-import parse from './parser.js';
+import resources from './locales';
 import initView from './view.js';
-
-const loadRss = (url) => axios
-  .get(`https://hexlet-allorigins.herokuapp.com/get?url=${encodeURIComponent(url)}`);
-
-const validate = (value, links) => {
-  const schema = yup
-    .string()
-    .required()
-    .url('Ссылка должна быть валидным URL');
-
-  try {
-    schema.validateSync(value);
-    if (links.includes(value)) {
-      throw Error('RSS уже существует');
-    }
-    return null;
-  } catch (err) {
-    return err.message;
-  }
-};
+import { handlerForModal, handlerForForm } from './handlers';
 
 const app = () => {
   const state = {
@@ -38,6 +20,8 @@ const app = () => {
     error: null,
     feeds: [],
     posts: [],
+    modal: false,
+    postId: null,
     links: [],
   };
 
@@ -48,45 +32,36 @@ const app = () => {
     feedbackBox: document.querySelector('.feedback'),
     feedsBox: document.querySelector('.feeds'),
     postsBox: document.querySelector('.posts'),
+    modal: document.querySelector('.modal'),
+    modalTitle: document.querySelector('.modal-title'),
+    modalBody: document.querySelector('.modal-body'),
+    modalBtnRead: document.querySelector('.modal-footer a'),
+    modalHeaderBtnClose: document.querySelector('.modal-header .close'),
+    modalFooterBtnClose: document.querySelector('.modal-footer button'),
   };
 
-  const watched = initView(state, elements);
-
-  elements.form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.target);
-    const url = formData.get('url');
-
-    const error = validate(url, watched.links);
-    if (error) {
-      watched.form.fields.url = {
-        error,
-        valid: false,
-      };
-      return;
-    }
-
-    watched.form.fields.url = {
-      error,
-      valid: true,
-    };
-    watched.error = null;
-    watched.links.push(url);
-    watched.form.status = 'loading';
-
-    loadRss(url)
-      .then((response) => {
-        const { feed, posts } = parse(response.data.contents);
-        watched.feeds = [feed, ...watched.feeds];
-        watched.posts = [...posts, ...watched.posts];
-        watched.form.status = 'filling';
-      })
-      .catch((err) => {
-        watched.form.status = 'failed';
-        watched.error = err.message;
-      });
+  const i18nInstance = i18n.createInstance();
+  i18nInstance.init({
+    lng: 'ru',
+    debug: false,
+    resources,
+  }).then(() => {
+    setLocale({
+      mixed: {
+        notOneOf: () => i18nInstance.t('errors.rssExists'),
+      },
+      string: {
+        url: () => i18nInstance.t('errors.invalidURL'),
+      },
+    });
   });
+
+  const watched = initView(state, elements, i18nInstance);
+
+  elements.form.addEventListener('submit', handlerForForm(watched));
+  elements.postsBox.addEventListener('click', handlerForModal(watched));
+  elements.modalHeaderBtnClose.addEventListener('click', handlerForModal(watched));
+  elements.modalFooterBtnClose.addEventListener('click', handlerForModal(watched));
 };
 
 export default app;

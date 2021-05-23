@@ -9,13 +9,13 @@
   <title>Test document</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+<body class="d-flex flex-column min-vh-100" data-testid="body">
+  <div class="modal fade" data-testid="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-testid="closeBtn">
             <span aria-hidden="true">×</span>
           </button>
         </div>
@@ -34,7 +34,7 @@
         <div class="col-md-10 col-lg-8 mx-auto text-white">
           <h1 class="display-3">RSS агрегатор</h1>
           <p class="lead">Начните читать RSS сегодня! Это легко, это красиво.</p>
-          <form action="#" class="rss-form">
+          <form action="#" class="rss-form" data-testid="form">
             <div class="form-row">
               <div class="col">
                 <input autofocus="" required="" name="url" aria-label="url"
@@ -46,16 +46,16 @@
             </div>
           </form>
           <p class="text-muted my-1">Пример: https://ru.hexlet.io/lessons.rss</p>
-          <div class="feedback"></div>
+          <div class="feedback" data-testid="feedback"></div>
         </div>
       </div>
     </section>
     <section class="container-fluid p-5">
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto feeds"></div>
+        <div class="col-md-10 col-lg-8 mx-auto feeds" data-testid="feeds"></div>
       </div>
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto posts"></div>
+        <div class="col-md-10 col-lg-8 mx-auto posts" data-testid="posts"></div>
       </div>
     </section>
   </main>
