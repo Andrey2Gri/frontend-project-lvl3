@@ -3,6 +3,7 @@ import _ from 'lodash';
 const parser = (data) => {
   const parserXML = new DOMParser();
   const document = parserXML.parseFromString(data, 'application/xml');
+  console.log(data);
   if (document.querySelector('parsererror')) {
     throw Error('Ресурс не содержит валидный RSS');
   }

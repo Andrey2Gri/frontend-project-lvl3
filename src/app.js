@@ -18,10 +18,10 @@ const app = () => {
       },
     },
     error: null,
-    feeds: [],
-    posts: [],
     modal: false,
     postId: null,
+    feeds: [],
+    posts: [],
     links: [],
   };
 

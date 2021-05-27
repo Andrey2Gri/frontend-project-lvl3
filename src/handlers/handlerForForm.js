@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import validate from '../validate.js';
-import parse from '../parser.js';
 import getData from '../getData.js';
+import updatePosts from '../updatePosts.js';
 
 export default (state) => (e) => {
   e.preventDefault();
@@ -25,12 +25,13 @@ export default (state) => (e) => {
   state.form.status = 'loading';
 
   getData(url)
-    .then((response) => {
-      const { feed, posts } = parse(response.data.contents);
+    .then((data) => {
+      const { feed, posts } = data;
       state.feeds = [feed, ...state.feeds];
       state.posts = [...posts, ...state.posts];
       state.links.push(url);
       state.form.status = 'filling';
+      updatePosts(state, url);
     })
     .catch((err) => {
       state.form.status = 'failed';
