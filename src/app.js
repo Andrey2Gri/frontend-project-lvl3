@@ -2,7 +2,7 @@ import { setLocale } from 'yup';
 import i18n from 'i18next';
 import 'bootstrap/js/dist/modal';
 
-import { ru } from './locales';
+import ru from './locales/ru.js';
 import initView from './view.js';
 import { handlerForModal, handlerForForm } from './handlers';
 
