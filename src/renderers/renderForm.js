@@ -6,7 +6,7 @@ export default (form, elements, i18nInstance) => {
       feedbackBox.classList.add('text-success');
       feedbackBox.textContent = i18nInstance.t('success');
       input.value = '';
-      input.setAttribute('readonly', false);
+      input.removeAttribute('readonly');
       break;
     case 'loading':
       submitBtn.setAttribute('disabled', true);
