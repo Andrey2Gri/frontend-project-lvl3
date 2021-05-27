@@ -11,11 +11,12 @@ export default (form, elements, i18nInstance) => {
     case 'loading':
       submitBtn.setAttribute('disabled', true);
       feedbackBox.classList.remove('text-success', 'text-danger');
-      input.setAttribute('readonly', '');
+      input.setAttribute('readonly', true);
       feedbackBox.textContent = '';
       break;
     case 'failed':
       submitBtn.removeAttribute('disabled');
+      input.removeAttribute('readonly');
       input.select();
       break;
     default:
