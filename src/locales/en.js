@@ -5,7 +5,7 @@ export default {
     errors: {
       invalidURL: 'The link must be a valid URL',
       rssExists: 'RSS already exists',
-      networkError: 'Network error, check your Internet connection',
+      networkError: 'Network error',
       invalidRSS: 'Invalid RSS',
     },
     success: 'RSS successfully loaded',

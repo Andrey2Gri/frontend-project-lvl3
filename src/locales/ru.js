@@ -5,7 +5,7 @@ export default {
     errors: {
       invalidURL: 'Ссылка должна быть валидным URL',
       rssExists: 'RSS уже существует',
-      netError: 'Ошибка сети, проверьте свое Интернет соединение',
+      netError: 'Ошибка сети',
       invalidRSS: 'Ресурс не содержит валидный RSS',
     },
     success: 'RSS успешно загружен',
