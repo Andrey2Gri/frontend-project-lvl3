@@ -12,4 +12,8 @@ export default (state, elements) => {
   modalBody.textContent = description;
   modalBtnRead.setAttribute('href', link);
   $('#modal').modal('show');
+  const btn = document.querySelector(`[data-id="${postId}"]`);
+  const linkPost = btn.previousElementSibling;
+  linkPost.classList.remove('font-weight-bold');
+  linkPost.classList.remove('font-weight-normal');
 };
