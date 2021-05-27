@@ -11,7 +11,7 @@ export default (form, elements, i18nInstance) => {
     case 'loading':
       submitBtn.setAttribute('disabled', true);
       feedbackBox.classList.remove('text-success', 'text-danger');
-      input.setAttribute('readonly', 'readonly');
+      input.readOnly = 'readonly';
       feedbackBox.textContent = '';
       break;
     case 'failed':
