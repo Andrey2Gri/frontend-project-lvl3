@@ -2,7 +2,7 @@ import { setLocale } from 'yup';
 import i18n from 'i18next';
 import 'bootstrap/js/dist/modal';
 
-import resources from './locales';
+import { ru } from './locales';
 import initView from './view.js';
 import { handlerForModal, handlerForForm } from './handlers';
 
@@ -44,7 +44,9 @@ const app = () => {
   i18nInstance.init({
     lng: 'ru',
     debug: false,
-    resources,
+    resources: {
+      ru,
+    },
   }).then(() => {
     setLocale({
       mixed: {
