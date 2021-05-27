@@ -3,7 +3,7 @@ import validate from '../validate.js';
 import getData from '../getData.js';
 import updatePosts from '../updatePosts.js';
 
-export default (state) => (e) => {
+export default (state, i18nInstance) => (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const url = formData.get('url');
@@ -33,8 +33,8 @@ export default (state) => (e) => {
       state.form.status = 'filling';
       updatePosts(state, url);
     })
-    .catch((err) => {
+    .catch(({ message }) => {
       state.form.status = 'failed';
-      state.error = err.message;
+      state.error = message === 'Network Error' ? i18nInstance.t('networkError') : message;
     });
 };

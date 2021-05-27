@@ -60,7 +60,7 @@ const app = () => {
 
   const watched = initView(state, elements, i18nInstance);
 
-  elements.form.addEventListener('submit', handlerForForm(watched));
+  elements.form.addEventListener('submit', handlerForForm(watched, i18nInstance));
   elements.postsBox.addEventListener('click', handlerForModal(watched));
   elements.modalHeaderBtnClose.addEventListener('click', handlerForModal(watched));
   elements.modalFooterBtnClose.addEventListener('click', handlerForModal(watched));
