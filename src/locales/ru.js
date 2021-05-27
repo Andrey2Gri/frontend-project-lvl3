@@ -11,8 +11,6 @@ export default {
     success: 'RSS успешно загружен',
     buttons: {
       view: 'Просмотр',
-      close: 'Закрыть',
-      readArticle: 'Читать полностью',
     },
   },
 };

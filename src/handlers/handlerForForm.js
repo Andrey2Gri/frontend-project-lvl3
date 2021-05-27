@@ -35,6 +35,6 @@ export default (state, i18nInstance) => (e) => {
     })
     .catch(({ message }) => {
       state.form.status = 'failed';
-      state.error = message === 'Network Error' ? i18nInstance.t('networkError') : message;
+      state.error = message === 'Network Error' ? i18nInstance.t('errors.networkError') : message;
     });
 };
