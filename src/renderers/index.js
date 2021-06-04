@@ -4,6 +4,7 @@ import renderPosts from './renderPosts';
 import renderForm from './renderForm';
 import renderFormError from './renderFormError';
 import renderModal from './renderModal';
+import renderFeedback from './renderFeedback';
 
 export {
   renderAppError,
@@ -12,4 +13,5 @@ export {
   renderForm,
   renderFormError,
   renderModal,
+  renderFeedback,
 };

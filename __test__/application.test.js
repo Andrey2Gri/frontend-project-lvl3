@@ -18,7 +18,7 @@ const elements = {};
 
 const url = 'http://lorem-rss.herokuapp.com/feed';
 const host = 'https://hexlet-allorigins.herokuapp.com';
-const requestPath = `/get?url=${encodeURIComponent(url)}`;
+const request = `/get?url=${encodeURIComponent(url)}&disableCache=true`;
 
 beforeAll(() => {
   axios.defaults.adapter = adapter;
@@ -37,16 +37,16 @@ beforeEach(() => {
 
 test('form is disabled while submitting', async () => {
   const scope = nock(host)
-    .get(requestPath)
+    .get(request)
     .reply(200, { contents: rss });
 
   userEvent.type(elements.input, url);
-  expect(elements.submit).not.toBeDisabled();
+  expect(elements.submit).toBeEnabled();
   userEvent.click(elements.submit);
   expect(elements.submit).toBeDisabled();
 
   await waitFor(() => {
-    expect(elements.submit).not.toBeDisabled();
+    expect(elements.submit).toBeEnabled();
   });
 
   await waitFor(() => {
@@ -57,7 +57,7 @@ test('form is disabled while submitting', async () => {
 
 test('can add feeds and post', async () => {
   nock(host)
-    .get(requestPath)
+    .get(request)
     .reply(200, { contents: rss });
 
   userEvent.type(elements.input, url);
@@ -79,9 +79,9 @@ test('can add feeds and post', async () => {
   });
 });
 
-test('modal show/hide', async () => {
+test('modal show', async () => {
   nock(host)
-    .get(requestPath)
+    .get(request)
     .reply(200, { contents: rss });
 
   expect(screen.getByTestId('modal')).not.toHaveClass('show');

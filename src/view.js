@@ -6,6 +6,7 @@ import {
   renderForm,
   renderModal,
   renderFormError,
+  renderFeedback,
 } from './renderers';
 
 const initView = (state, elements, i18nInstance) => {
@@ -13,7 +14,10 @@ const initView = (state, elements, i18nInstance) => {
     error: () => renderAppError(state.error, elements, i18nInstance),
     feeds: () => renderFeeds(state.feeds, elements, i18nInstance),
     posts: () => renderPosts(state, elements, i18nInstance),
-    'form.status': () => renderForm(state.form, elements, i18nInstance),
+    'form.status': () => {
+      renderForm(state.form, elements, i18nInstance);
+      renderFeedback(state.form.status, elements, i18nInstance);
+    },
     'form.fields.url': () => renderFormError(state.form.fields, elements),
     modal: () => renderModal(state, elements),
   };
