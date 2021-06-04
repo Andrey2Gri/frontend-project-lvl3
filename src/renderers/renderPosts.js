@@ -12,9 +12,9 @@ const getListItems = (state, i18nInstance) => state.posts.map((post) => {
   itemLink.setAttribute('target', '_blank');
   itemLink.dataset.id = id;
   if (visited) {
-    itemLink.classList.add('fw-normal');
+    itemLink.classList.add('fw-normal', 'font-weight-normal');
   } else {
-    itemLink.classList.add('fw-bold');
+    itemLink.classList.add('fw-bold', 'font-weight-bold');
   }
   itemLink.textContent = title;
   const btn = document.createElement('button');
