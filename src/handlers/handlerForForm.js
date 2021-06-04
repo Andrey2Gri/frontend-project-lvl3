@@ -7,7 +7,8 @@ export default (state, i18nInstance) => (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const url = formData.get('url');
-  const error = validate(url, state.links);
+  const urlsFeeds = state.feeds.map((feed) => feed.url);
+  const error = validate(url, urlsFeeds);
 
   if (error) {
     state.form.fields.url = {
@@ -29,7 +30,6 @@ export default (state, i18nInstance) => (e) => {
       const { feed, posts } = data;
       state.feeds = [feed, ...state.feeds];
       state.posts = [...posts, ...state.posts];
-      state.links.push(url);
       state.form.status = 'filling';
       updatePosts(state, url);
     })

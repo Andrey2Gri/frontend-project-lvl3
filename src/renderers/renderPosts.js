@@ -1,10 +1,21 @@
-const getListItems = (posts, i18nInstance) => posts.map((post) => {
-  const { title, link, id } = post;
+const getListItems = (state, i18nInstance) => state.posts.map((post) => {
+  const {
+    title,
+    link,
+    id,
+    visited,
+  } = post;
   const listItem = document.createElement('li');
   listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-start');
   const itemLink = document.createElement('a');
   itemLink.setAttribute('href', link);
-  itemLink.classList.add('font-weight-bold');
+  itemLink.setAttribute('target', '_blank');
+  itemLink.dataset.id = id;
+  if (visited) {
+    itemLink.classList.add('font-weight-normal');
+  } else {
+    itemLink.classList.add('font-weight-bold');
+  }
   itemLink.textContent = title;
   const btn = document.createElement('button');
   btn.dataset.id = id;
@@ -15,7 +26,6 @@ const getListItems = (posts, i18nInstance) => posts.map((post) => {
 });
 
 export default (state, elements, i18nInstance) => {
-  const { posts } = state;
   const { postsBox } = elements;
   postsBox.innerHTML = '';
   const head = document.createElement('h2');
@@ -23,6 +33,6 @@ export default (state, elements, i18nInstance) => {
   const listPosts = document.createElement('ul');
   listPosts.classList.add('list-group');
   postsBox.append(head, listPosts);
-  const listPostsItems = getListItems(posts, i18nInstance);
+  const listPostsItems = getListItems(state, i18nInstance);
   listPosts.append(...listPostsItems);
 };

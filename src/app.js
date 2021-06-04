@@ -4,7 +4,7 @@ import 'bootstrap/js/dist/modal';
 
 import ru from './locales/ru.js';
 import initView from './view.js';
-import { handlerForModal, handlerForForm } from './handlers';
+import { handlerForModal, handlerForForm, handlerForLink } from './handlers';
 
 const app = () => {
   const state = {
@@ -22,7 +22,6 @@ const app = () => {
     postId: null,
     feeds: [],
     posts: [],
-    links: [],
   };
 
   const elements = {
@@ -61,6 +60,7 @@ const app = () => {
   const watched = initView(state, elements, i18nInstance);
 
   elements.form.addEventListener('submit', handlerForForm(watched, i18nInstance));
+  elements.postsBox.addEventListener('click', handlerForLink(watched));
   elements.postsBox.addEventListener('click', handlerForModal(watched));
   elements.modalHeaderBtnClose.addEventListener('click', handlerForModal(watched));
   elements.modalFooterBtnClose.addEventListener('click', handlerForModal(watched));

@@ -12,7 +12,7 @@ const routes = {
 
 export default (url) => axios
   .get(routes.allOrigins(url))
-  .then((response) => parse(response.data.contents))
+  .then((response) => parse(response.data.contents, url))
   .catch((e) => {
     throw e;
   });

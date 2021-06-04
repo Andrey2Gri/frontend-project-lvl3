@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const parser = (data) => {
+const parser = (data, url) => {
   const parserXML = new DOMParser();
   const document = parserXML.parseFromString(data, 'application/xml');
   if (document.querySelector('parsererror')) {
@@ -22,11 +22,13 @@ const parser = (data) => {
         title: title.textContent,
         link: link.textContent,
         description: description.textContent,
+        visited: false,
       };
     });
 
   return {
     feed: {
+      url,
       feedId,
       title: titleFeed.textContent,
       description: descriptionFeed.textContent,
