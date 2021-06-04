@@ -8,9 +8,6 @@ build:
 	rm -rf dist
 	NODE_ENV=production npx webpack
 
-test:
-	npx jest
-
 lint:
 	npx eslint .
 
